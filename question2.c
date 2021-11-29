@@ -77,7 +77,7 @@ uint32_t tag_mask1       =   0xffff8000;
   
 
  
-      tag = ((addr & tag_mask1) >> 15);//isolate tag and shift
+      tag = ((addr & tag_mask1) >> 20);//isolate tag and shift
 
       
 
@@ -103,7 +103,7 @@ uint32_t tag_mask1       =   0xffff8000;
      
 
       index = ((addr & index_mask2) >> 6);
-      tag = ((addr & tag_mask2) >> 17);
+      tag = ((addr & tag_mask2) >> 23);
       //Account for all misses and hits in Case 2
       if (valid2[index] == 1) {// if the valid bit is a 1, compare tags 
         if (tags2[index] == tag) { // if data is in the cache block that has the same tag

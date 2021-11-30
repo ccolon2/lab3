@@ -94,7 +94,7 @@ int main(void) {
         x[i][j] = x[i][j] + y[i][k] * z[k][j];
         index_extracted = bit_extractor(&x[i][j], index_length, index_start);
         tag_extracted = bit_extractor(&x[i][j], tag_length, tag_start);
-        //for all of X array cache
+ 
         if(valid_bits[x_beginning - index_extracted] == 1) { // if the valid bit is a 1, compare tags 
             if(tag[x_beginning - index_extracted] == tag_extracted) { // if data is in the cache block that has the same tag
                 hits++; //due to spatial locality 

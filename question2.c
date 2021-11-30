@@ -10,12 +10,18 @@ unsigned long int bit_extractor(unsigned long int number, int sz, int start) {
 }
 
 int main(void) {
-  int index_length = 11;   //32 byte cache : 10   128 byte cache: 11
-  int index_start = 7;   //32 byte cache: 6    128 byte cache: 7
-  int tag_length = 15;     //32 byte cache: 17   128 byte cache: 15
-  int tag_start = 18;    //32 byte cache: 16   128 byte cache: 18
+    
+   //32 byte cache : 10   128 byte cache: 11
+  int index_length = 11; 
+   //32 byte cache: 6    128 byte cache: 7
+  int index_start = 7;   
+   //32 byte cache: 17   128 byte cache: 15
+  int tag_length = 15; 
+  //32 byte cache: 16   128 byte cache: 18
 
-  int x[XSIZE][YSIZE];
+  int tag_start = 18;    
+ 
+   int x[XSIZE][YSIZE];
   int y[XSIZE][YSIZE];
   int z[XSIZE][YSIZE];
 
